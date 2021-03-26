@@ -1,0 +1,550 @@
+body {
+    margin: auto;
+    border: solid 12px #FF8C00;
+    width: 97.5vw;
+    height: 98.2vh;
+    background-color: #D2691E;
+}
+
+/* A parent container for the white and black key sections  */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    min-width: 320px;
+    max-width: 1920px;
+    margin: 10% auto;
+    padding: 0 20px 30px 20px;
+    border-radius: 25px;
+    border-top: none;
+    background-color: rgba(16 18 27 / 40%);
+}
+
+/* Make the keys and black keys section flex */
+.white-keys,
+.black-keys {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.white-keys {
+    position: relative;
+    flex: 1 1 auto;
+    z-index: 1;
+}
+
+.black-keys {
+    position: absolute;
+    z-index: 10;
+    /* Keep the black keys unto of the white keys*/
+}
+
+/* Justify and center the key labels and add padding on the bottom */
+.white,
+.black {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.white {
+    flex: 1 1 auto;
+    border: solid thin #eee;
+    height: 300px;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 4px 4px 2px rgba(7, 7, 7, .7);
+    border-radius: 1px 1px 12px 12px;
+}
+
+.black {
+    position: relative;
+    width: 40px;
+    height: 200px;
+    background-color: #000;
+    color: #fff;
+    border: solid thin #363636;
+    border-radius: 1px 1px 12px 12px;
+    box-shadow: 1px 0 1px 1px rgb(0, 0, 0);
+
+}
+
+.black-key-played {
+    background-color: #000;
+}
+
+.white-key-played {
+    background-color: #fcf8e3;
+    background-color: rgba(224, 255, 255, 1);
+    box-shadow: inset 0 0 0 0 rgba(7, 7, 7, .7);
+    transform: translate(-30px -70deg);
+}
+
+.overlay {
+    background-color: rgba(168, 202, 241, 1);
+    transition: 5ms;
+}
+
+#W,
+#E,
+#T,
+#Y,
+#U {
+    position: relative;
+}
+
+#W {
+    left: 42px;
+}
+
+#E {
+    left: 70px;
+}
+
+#T {
+    left: 160px;
+}
+
+#Y {
+    left: 184px;
+}
+
+#U {
+    left: 210px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 320px) and (max-width: 600px) {
+
+    .black {
+        width: 27px;
+    }
+
+    #W {
+        left: 27px;
+    }
+
+    #E {
+        left: 44px;
+    }
+
+    #T {
+        left: 109px;
+    }
+
+    #Y {
+        left: 124px;
+    }
+
+    #U {
+        left: 139px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1320px) {
+    .black {
+        width: 30px;
+    }
+
+    #W {
+        left: 27px;
+    }
+
+    #E {
+        left: 40px;
+    }
+
+    #T {
+        left: 100px;
+    }
+
+    #Y {
+        left: 114px;
+    }
+
+    #U {
+        left: 127px;
+    }
+}
+
+@media screen and (min-width: 1321px) and (max-width: 1340px) {
+    .black {
+        width: 30px;
+    }
+
+    #W {
+        left: 28px;
+    }
+
+    #E {
+        left: 40px;
+    }
+
+    #T {
+        left: 100px;
+    }
+
+    #Y {
+        left: 116px;
+    }
+
+    #U {
+        left: 130px;
+    }
+}
+
+@media screen and (min-width: 1341px) and (max-width: 1380px) {
+    .black {
+        width: 30px;
+    }
+
+    #W {
+        left: 28px;
+    }
+
+    #E {
+        left: 45px;
+    }
+
+    #T {
+        left: 110px;
+    }
+
+    #Y {
+        left: 124px;
+    }
+
+    #U {
+        left: 138px;
+    }
+}
+
+@media screen and (min-width: 1381px) and (max-width: 1400px) {
+    .black {
+        width: 30px;
+    }
+
+    #W {
+        left: 28px;
+    }
+
+    #E {
+        left: 45px;
+    }
+
+    #T {
+        left: 110px;
+    }
+
+    #Y {
+        left: 126px;
+    }
+
+    #U {
+        left: 144px;
+    }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1420px) {
+    .black {
+        width: 28px;
+    }
+
+    #W {
+        left: 30px;
+    }
+
+    #E {
+        left: 49px;
+    }
+
+    #T {
+        left: 116px;
+    }
+
+    #Y {
+        left: 136px;
+    }
+
+    #U {
+        left: 154px;
+    }
+}
+
+@media screen and (min-width: 1421px) and (max-width: 1440px) {
+
+    .black {
+        width: 28px;
+    }
+
+    #W {
+        left: 30px;
+    }
+
+    #E {
+        left: 49px;
+    }
+
+    #T {
+        left: 120px;
+    }
+
+    #Y {
+        left: 140px;
+    }
+
+    #U {
+        left: 158px;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1460px) {
+
+    .black {
+        width: 30px;
+    }
+
+    #W {
+        left: 32px;
+    }
+
+    #E {
+        left: 50px;
+    }
+
+    #T {
+        left: 120px;
+    }
+
+    #Y {
+        left: 136px;
+    }
+
+    #U {
+        left: 154px;
+    }
+}
+
+@media screen and (min-width: 1461px) and (max-width: 1500px) {
+
+    .black {
+        width: 30px;
+    }
+
+    #W {
+        left: 33px;
+    }
+
+    #E {
+        left: 53px;
+    }
+
+    #T {
+        left: 124px;
+    }
+
+    #Y {
+        left: 142px;
+    }
+
+    #U {
+        left: 162px;
+    }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 1520px) {
+
+    .black {
+        width: 30px;
+    }
+
+    #W {
+        left: 35px;
+    }
+
+    #E {
+        left: 54px;
+    }
+
+    #T {
+        left: 128px;
+    }
+
+    #Y {
+        left: 146px;
+    }
+
+    #U {
+        left: 166px;
+    }
+}
+
+
+@media screen and (min-width: 1521px) and (max-width: 1600px) {
+
+    .black {
+        width: 30px;
+    }
+
+    #W {
+        left: 35px;
+    }
+
+    #E {
+        left: 60px;
+    }
+
+    #T {
+        left: 140px;
+    }
+
+    #Y {
+        left: 164px;
+    }
+
+    #U {
+        left: 184px;
+    }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1700px) {
+
+    .black {
+        width: 40px;
+    }
+
+    #W {
+        left: 35px;
+    }
+
+    #E {
+        left: 52px;
+    }
+
+    #T {
+        left: 128px;
+    }
+
+    #Y {
+        left: 144px;
+    }
+
+    #U {
+        left: 160px;
+    }
+}
+
+
+@media screen and (min-width: 1701px) and (max-width: 1750px) {
+
+    .black {
+        width: 40px;
+    }
+
+    #W {
+        left: 38px;
+    }
+
+    #E {
+        left: 56px;
+    }
+
+    #T {
+        left: 136px;
+    }
+
+    #Y {
+        left: 156px;
+    }
+
+    #U {
+        left: 172px;
+    }
+}
+
+@media screen and (min-width: 1751px) and (max-width: 1800px) {
+
+    .black {
+        width: 40px;
+    }
+
+    #W {
+        left: 38px;
+    }
+
+    #E {
+        left: 62px;
+    }
+
+    #T {
+        left: 146px;
+    }
+
+    #Y {
+        left: 164px;
+    }
+
+    #U {
+        left: 188px;
+    }
+}
+
+
+@media screen and (min-width: 1801px) and (max-width: 1850px) {
+
+    .black {
+        width: 40px;
+    }
+
+    #W {
+        left: 38px;
+    }
+
+    #E {
+        left: 62px;
+    }
+
+    #T {
+        left: 146px;
+    }
+
+    #Y {
+        left: 164px;
+    }
+
+    #U {
+        left: 188px;
+    }
+}
+
+
+/*###################################
+            L A P T O P S
+#################################### */
+
+
+/* @media screen and (min-width: 1920px) {
+    #W {
+        left: 42px;
+    }
+
+    #E {
+        left: 70px;
+    }
+
+    #T {
+        left: 160px;
+    }
+
+    #Y {
+        left: 184px;
+    }
+
+    #U {
+        left: 210px;
+    }
+} */
